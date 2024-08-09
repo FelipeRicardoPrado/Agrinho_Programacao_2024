@@ -1,0 +1,226 @@
+:root {
+  --Verde: #BEFD65;
+  --Branco_01: #FDFEFC;
+  --Branco_02: #F4F5F4;
+  --Branco_03: rgb(0, 0, 0, .5);
+}
+
+section:nth-child(2) div:has(h2),
+section:nth-child(4) div:has(#c) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 84%;
+  padding: 0 0 0 clamp(15px, 6vw, 50px);
+  margin-top: clamp(50px, 7.9vw, 150px);
+  align-self: flex-start;
+  position: relative;
+}
+
+section div:has(h2) {
+  width: min(100%, 42rem);
+}
+
+section div:has(h2) h2 {
+  line-height: 4.5rem;
+  margin-bottom: 2rem;
+}
+
+section p {
+  width: min(24.5rem, 100%);
+}
+
+section #b,
+section #d {
+  width: min(100%, 300px);
+  height: 285px;
+  border-radius: 0.75rem;
+}
+
+section:nth-child(2) {
+  height: clamp(59rem, 53vw, 62rem);
+  margin-top: clamp(7.8rem, 8.35vw, 10rem);
+}
+
+section:nth-child(2) div:has(h2) {
+  flex-flow: column;
+  align-items: start;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(100%, 53rem);
+}
+
+section:nth-child(2) div:has(h2) h2 {
+  width: min(100%, 36rem);
+  margin-bottom: 1rem;
+}
+
+section:nth-child(2) div:has(h2) #a {
+  width: min(100%, 921px);
+  height: 525px;
+  margin-top: 2.5rem;
+  border-radius: 0.75rem;
+}
+
+section:nth-child(2) h1 {
+  font-size: max(2rem, 5vw);
+  text-transform: uppercase;
+  position: absolute;
+  left: 36.2vw;
+  top: -0.5rem;
+}
+
+section:nth-child(2) .sub_titulo {
+  position: absolute;
+  top: 12rem;
+}
+
+section:nth-child(2) div:has(#b) {
+  position: absolute;
+  bottom: 10rem;
+  width: min(100%, 300px);
+}
+
+section:nth-child(2) div:has(#b) p {
+  margin-bottom: 1rem;
+}
+
+section:nth-child(3) {
+  height: 20.375rem;
+}
+
+section:nth-child(3) div:has(h2) {
+  position: absolute;
+  right: 11rem;
+  top: -0.5rem;
+}
+
+section:nth-child(4) {
+  height: 44.625rem;
+}
+
+section:nth-child(4) p {
+  width: min(22.9rem, 100%);
+}
+
+section:nth-child(4) h2 {
+  text-indent: 36rem;
+  position: absolute;
+  top: -1rem;
+}
+
+section:nth-child(4) div:has(#c) {
+  flex-flow: row;
+  justify-content: space-between;
+  width: min(100%, 53rem);
+  margin-top: 5.5rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+section:nth-child(4) div:has(#c) #c {
+  width: min(100%, 470px);
+  height: 416px;
+  border-radius: 0.75rem;
+}
+
+section:nth-child(4) #d {
+  position: absolute;
+  bottom: 0;
+}
+
+@media (width < 415px) {
+  header a div {
+    display: none;
+    width: 97.39%;
+    position: absolute;
+    top: 42.55rem;
+    left: 5px;
+  }
+
+  section {
+    width: 100%;
+    padding: 0 15px 0 15px;
+  }
+
+  section div:has(h2) h2 {
+    line-height: normal;
+    margin-bottom: 0.5rem;
+  }
+
+  section:nth-child(2) div:has(h2) {
+    position: relative;
+    top: 5.3rem;
+    left: 0;
+  }
+
+  section:nth-child(2) div:has(h2) h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  section:nth-child(2) div:has(h2) #a {
+    margin-top: 1.5rem;
+    height: 12.5rem;
+  }
+
+  section:nth-child(2) h1 {
+    font-weight: 500;
+    left: 15px;
+  }
+
+  section:nth-child(2) .sub_titulo {
+    top: 3.5rem;
+  }
+
+  section:nth-child(2) div:has(#b) {
+    bottom: 0;
+    left: calc((100vw - min(100%, 300px)) / 2.5);
+  }
+
+  section:nth-child(3) div:has(h2) {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  section:nth-child(3) {
+    height: auto;
+  }
+
+  section:nth-child(4) h2 {
+    position: relative;
+    top: 0;
+    width: 100%;
+    text-indent: 0;
+  }
+
+  section:nth-child(4) div:has(#c) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column-reverse;
+    position: relative;
+    margin-top: 0;
+  }
+
+  section:nth-child(4) div:has(#c) #c {
+    height: 18.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  section:nth-child(4) #d {
+    margin-top: 1rem;
+    position: relative;
+    left: calc((100vw - min(100%, 300px)) / 2 - clamp(15px, 6vw, 50px));
+  }
+
+  section:nth-child(4) {
+    height: auto;
+  }
+}

@@ -1,0 +1,311 @@
+:root {
+  --Verde: #BEFD65;
+  --Branco_01: #FDFEFC;
+  --Branco_02: #F4F5F4;
+  --Branco_03: rgb(0, 0, 0, .5);
+}
+
+section:nth-child(3) #cards_b div,
+section:nth-child(4) #c,
+section:nth-child(4) #c div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub_titulo {
+  position: absolute;
+  top: 0;
+  left: clamp(15px, 6vw, 50px);
+}
+
+section {
+  width: 100%;
+  padding: 0 clamp(15px, 6vw, 50px) 0 clamp(15px, 6vw, 50px);
+  margin-top: clamp(50px, 7.9vw, 150px);
+  align-self: flex-start;
+  position: relative;
+}
+
+section:nth-child(2) {
+  margin-top: 150px;
+  height: clamp(45rem, 60vw, 63.5rem);
+}
+
+section:nth-child(2) #titulo {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  padding: 0 max(15px, 2.61vw) 0 max(15px, 2.61vw);
+}
+
+section:nth-child(2) #titulo h1 {
+  font-size: max(2rem, 5vw);
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+}
+
+section:nth-child(2) #titulo h1:nth-child(2) {
+  font-weight: 300;
+  top: -1.5rem;
+  text-align: end;
+  width: 100%;
+}
+
+section:nth-child(2) #titulo div {
+  background: rgba(0, 0, 0, 0.7);
+  height: 3px;
+  border-radius: 5rem;
+  width: max(158px, 35vw);
+  position: absolute;
+  top: 4.2rem;
+  right: max(15px, 2.61vw);
+}
+
+section:nth-child(2) #a {
+  position: absolute;
+  width: min(91.5%, 22rem);
+  right: max(15px, 16.41vw);
+  top: 20.2rem;
+}
+
+section:nth-child(2) #a p {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: justify;
+}
+
+section:nth-child(2) #drone {
+  position: absolute;
+  z-index: 2;
+  left: calc((100vw - 32%) / 2);
+  bottom: clamp(7.1rem, 8vw, 8.6rem);
+  width: 31%;
+}
+
+section:nth-child(2) #mask {
+  width: calc(100vw - clamp(45px, 7vw, 115px));
+  height: clamp(16.5rem, 40vw, 44.3rem);
+  background: url(../img/Mask.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 1;
+  left: clamp(15px, 4vw, 50px);
+  bottom: -1.5rem;
+}
+
+section:nth-child(3) {
+  height: 31.5rem;
+}
+
+section:nth-child(3) #b {
+  width: 35rem;
+  position: absolute;
+  top: -1.1rem;
+  left: 35.2rem;
+}
+
+section:nth-child(3) #b p {
+  color: rgba(0, 0, 0, 0.5);
+  width: 26rem;
+  margin-top: 1rem;
+}
+
+section:nth-child(3) #cards_b {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  position: absolute;
+  grid-gap: 0.8rem;
+  bottom: 0;
+  width: 65.8%;
+  right: clamp(15px, 6vw, 50px);
+}
+
+section:nth-child(3) #cards_b div {
+  flex-flow: column;
+  align-items: start;
+  background: #F4F5F4;
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: 0.3s;
+  cursor: default;
+}
+
+section:nth-child(3) #cards_b div:nth-child(1) {
+  background: #BEFD65;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 4px 30px;
+  z-index: 1;
+}
+
+section:nth-child(3) #cards_b div:hover {
+  background: #BEFD65;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 4px 30px;
+  z-index: 1;
+}
+
+section:nth-child(3) #cards_b div .material-symbols-outlined {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+section:nth-child(3) #cards_b div p:nth-child(2) {
+  font-size: max(2.25rem, 2.09vw);
+}
+
+section:nth-child(3) #cards_b div p:nth-child(3) {
+  font-weight: 500;
+}
+
+section:nth-child(3) #cards_b:has(div:hover) div:not(div:hover) {
+  background: #F4F5F4;
+  box-shadow: none;
+}
+
+section:nth-child(4) {
+  height: 68rem;
+}
+
+section:nth-child(4) h2 {
+  width: max(20.625rem, 41.7vw);
+  position: absolute;
+  top: -0.8rem;
+  left: 35.2rem;
+}
+
+section:nth-child(4) #drone {
+  position: absolute;
+  bottom: 16rem;
+  z-index: 1;
+  left: calc((100vw - max(19.68rem, 40.84vw)) / 2);
+  width: max(19.68rem, 40.84vw);
+}
+
+section:nth-child(4) #c {
+  flex-flow: row wrap;
+  background: url(../img/nature.jpg) center no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: clamp(7rem, 15vw, 15.625rem) 5rem 1rem 5rem;
+}
+
+section:nth-child(4) #c div {
+  flex-flow: row;
+  justify-content: space-between;
+  background: #F4F5F4;
+  width: 25rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  height: 10rem;
+  margin: 1rem;
+  transition: 0.3s;
+  z-index: 1;
+  cursor: default;
+}
+
+section:nth-child(4) #c div p {
+  margin-left: 0.8rem;
+}
+
+section:nth-child(4) #c div:nth-child(1),
+section:nth-child(4) #c div:nth-child(3),
+section:nth-child(4) #c div:nth-child(4) {
+  background: #BEFD65;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 4px 30px;
+}
+
+section:nth-child(4) #c div:hover {
+  background: #BEFD65;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 4px 30px;
+}
+
+section:nth-child(4) #c:has(div:hover) div:not(div:hover) {
+  background: #F4F5F4;
+  box-shadow: none;
+}
+
+@media (width < 900px) {
+  section:nth-child(2) #titulo h1:nth-child(2) {
+    top: -5px;
+  }
+
+  section:nth-child(2) #a {
+    top: 15rem;
+    right: 15px;
+  }
+}
+
+@media (width < 415px) {
+  section {
+    padding: 0 15px 0 15px;
+  }
+
+  section:nth-child(2) #titulo h1 {
+    width: 80%;
+  }
+
+  section:nth-child(2) #drone {
+    left: 19%;
+    width: 62%;
+  }
+
+  section:nth-child(2) #mask {
+    background: url(../img/Mask_Mobile.png) no-repeat center;
+    background-size: contain;
+    bottom: 4rem;
+  }
+
+  section:nth-child(2) {
+    margin-top: 4rem;
+  }
+
+  section:nth-child(3) {
+    height: 57rem;
+  }
+
+  section:nth-child(3) #b {
+    width: 91.5%;
+    left: 15px;
+    top: 2.5rem;
+  }
+
+  section:nth-child(3) #b p {
+    width: 100%;
+  }
+
+  section:nth-child(3) #cards_b {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: calc(100vw - 45px);
+    right: 15px;
+  }
+
+  section:nth-child(4) {
+    height: 72.5rem;
+  }
+
+  section:nth-child(4) h2 {
+    left: 15px;
+    top: 2.5rem;
+  }
+
+  section:nth-child(4) #drone {
+    left: 30px;
+    top: 5rem;
+  }
+
+  section:nth-child(4) #c {
+    padding: 7rem 0 1rem 0;
+  }
+
+  section:nth-child(4) #c div {
+    width: 100%;
+    height: 9rem;
+    margin: 8.5px 15px 8.5px 15px;
+  }
+}

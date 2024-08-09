@@ -1,0 +1,239 @@
+:root {
+    --Verde: #BEFD65;
+    --Branco_01: #FDFEFC;
+    --Branco_02: #F4F5F4;
+    --Branco_03: rgb(0, 0, 0, .5);
+}
+
+body,
+header,
+header div,
+header:has(#resp:checked) div:nth-child(3),
+footer div,
+.sub_titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: max(16px, 0.89vw);
+    text-decoration: none;
+    color: black;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-SemiBoldItalic.ttf);
+    font-style: italic;
+    font-weight: 600;
+}
+
+body {
+    min-height: 100vh;
+    flex-flow: column;
+    background: var(--Branco_01);
+}
+
+h2 {
+    font-size: max(1.5rem, 3.34vw);
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: max(17px, 0.94vw);
+}
+
+header {
+    position: absolute;
+    top: 50px;
+    width: 94.8%;
+    flex-flow: row;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+header div {
+    flex-flow: row;
+    background: #F4F5F4;
+    border-radius: 50rem;
+    padding: 0.94rem 1.5rem 0.94rem 1.5rem;
+}
+
+header div p#logo {
+    font-weight: 600;
+    font-style: italic;
+    text-align: center;
+    margin-right: min(6vw, 6.5rem);
+}
+
+header div a {
+    text-decoration: none;
+    text-align: center;
+    margin: 0 0.94rem 0 0.94rem;
+}
+
+header div a:hover {
+    text-decoration: underline;
+}
+
+header div div {
+    height: 23px;
+    padding: 0;
+    margin-left: 0.94rem;
+}
+
+header div div span {
+    padding: 1px;
+    height: 100%;
+    margin: 0 2px 0 1px;
+    border-radius: 5rem;
+    background: var(--Branco_03);
+}
+
+header a div {
+    background: var(--Verde);
+    border: 2px solid var(--Verde);
+    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+    width: 15rem;
+    transition: 0.3s;
+    display: flex;
+}
+
+header a div p {
+    margin-right: 0.5rem;
+}
+
+header a div:hover {
+    background: none;
+}
+
+header #resp {
+    display: none;
+}
+
+header #check {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: -1rem;
+    cursor: pointer;
+}
+
+header:has(#resp:checked) div:nth-child(3) {
+    flex-flow: column;
+    width: 97.39%;
+    border-radius: 1rem;
+    position: relative;
+    left: 5px;
+    z-index: 1;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 5rem;
+    width: 100%;
+    padding: 6rem clamp(6.25rem, 11vw, 12.5rem) 4rem clamp(12.5rem, 22vw, 25rem);
+    margin-top: clamp(6.25rem, 11vw, 12.5rem);
+    background: black;
+}
+
+footer div {
+    flex-flow: column;
+    justify-content: start;
+    align-items: start;
+}
+
+footer div a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+footer div a:hover {
+    text-decoration: underline;
+}
+
+footer div p {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: max(17px, 0.94vw);
+    text-transform: uppercase;
+    color: white;
+}
+
+.sub_titulo {
+    flex-flow: row;
+    width: -moz-max-content;
+    width: max-content;
+}
+
+.sub_titulo h3 {
+    margin-left: 0.5rem;
+}
+
+@media (width < 860px) {
+    header div {
+        display: none;
+    }
+
+    header div p#logo {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    header #check {
+        display: flex;
+    }
+}
+
+@media (width < 415px) {
+    header a div {
+        width: 97.39%;
+        position: absolute;
+        top: 42.55rem;
+        left: 5px;
+    }
+
+    footer div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding: 5rem 1rem 8rem 1rem;
+        grid-gap: 0;
+    }
+}
